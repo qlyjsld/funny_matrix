@@ -1,9 +1,7 @@
-#include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
-#include <math.h>
 #include <immintrin.h>
-#define N 2048
+#define N 1024
 
 double ans[N][N] __attribute__ ((aligned (64)));
 double res[N][N] __attribute__ ((aligned (64)));
@@ -11,12 +9,6 @@ double mul1[N][N] __attribute__ ((aligned (64)));
 double mul2[N][N] __attribute__ ((aligned (64)));
 
 #define SM (64 / sizeof(double))
-
-inline double randf(double x)
-{
-	x = sin(x) * 1024.f;
-	return x - floor(x);
-}
 
 int main (void)
 {
@@ -31,10 +23,8 @@ int main (void)
 	// init
 	for (i = 0; i < N; ++i)
 		for (j = 0; j < N; ++j) {
-			ans[i][j] = 0;
-			res[i][j] = 0;
-			mul1[i][j] = randf(i * j);
-			mul2[i][j] = randf(i * j);
+			mul1[i][j] = i;
+			mul2[i][j] = j;
 		}
 
 	// brute force ans

@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -O3 -march=native
+CFLAGS = -Wall -O2 -march=native
 all: main
 
 .PHONY: main
