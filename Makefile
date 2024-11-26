@@ -1,10 +1,10 @@
 CC = gcc
-CFLAGS = -Wall -O2 -march=native
+CFLAGS = -Wall -O2 -mavx2
 all: main
 
 .PHONY: main
 main: main.c
-	$(CC) $(CFLAGS) main.c -o a.out -lm
+	$(CC) $(CFLAGS) main.c -o a.out
 
 .PHONY: clean
 clean:
