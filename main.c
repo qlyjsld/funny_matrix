@@ -26,8 +26,8 @@ int main(void)
     printf("initializing matrix...\n\n");
     for (i = 0; i < N; ++i)
         for (j = 0; j < N; ++j) {
-            mul1[i][j] = rand();
-            mul2[i][j] = rand();
+            mul1[i][j] = rand() % (N + 1);
+            mul2[i][j] = rand() % (N + 1);
         }
 
     printf("brute forcing ans...\n");
