@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -O2 -mavx2
+CFLAGS = -Wall -g -mavx2
 all: main
 
 .PHONY: main
